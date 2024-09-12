@@ -44,6 +44,7 @@ async function run() {
       const id = req.params.id;
       const query = { _id: new ObjectId(id) };
       const result = await usersCollection.deleteOne(query);
+      console.log("please delete from database", id);
       res.send(result);
     });
 
